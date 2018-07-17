@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Not_Hotdog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OEq-6A-1Lw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXB-Ss-8D0">
+                                <rect key="frame" x="123" y="615" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="em8-Sw-hDx"/>
+                                    <constraint firstAttribute="width" constant="128" id="lUJ-qT-M3Z"/>
+                                </constraints>
+                                <state key="normal" image="sausage"/>
+                                <connections>
+                                    <action selector="hotdogPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MRX-Cl-9KI"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="That's A Hotdog!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-it-ASq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6eh-RJ-Ek5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="45"/>
+                                <color key="textColor" red="1" green="0.2845802057861111" blue="0.13258942252500003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEq-6A-1Lw" secondAttribute="trailing" id="515-rv-4pr"/>
+                            <constraint firstItem="kr3-it-ASq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NMB-pE-aVy"/>
+                            <constraint firstItem="OEq-6A-1Lw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bvh-dY-IPQ"/>
+                            <constraint firstItem="bXB-Ss-8D0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fu9-Sv-eU2"/>
+                            <constraint firstAttribute="bottom" secondItem="OEq-6A-1Lw" secondAttribute="bottom" id="i8o-RO-cXM"/>
+                            <constraint firstItem="kr3-it-ASq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rwd-rF-mNs"/>
+                            <constraint firstItem="kr3-it-ASq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t2x-Qs-3Mp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXB-Ss-8D0" secondAttribute="bottom" constant="35" id="w1L-2h-cng"/>
+                            <constraint firstItem="OEq-6A-1Lw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wPN-E6-yWj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="hotdogLabel" destination="kr3-it-ASq" id="Gwi-b5-5Bf"/>
+                        <outlet property="previewView" destination="OEq-6A-1Lw" id="Aa2-Ef-tZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.251231527093594"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sausage" width="512" height="512"/>
+    </resources>
+</document>
